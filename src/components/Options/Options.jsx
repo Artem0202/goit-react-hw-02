@@ -10,9 +10,7 @@ export default function Options({
       <button onClick={() => updateFeedback("good")}>Good</button>
       <button onClick={() => updateFeedback("neutral")}>Neutral</button>
       <button onClick={() => updateFeedback("bad")}>Bad</button>
-      <button onClick={removeComments} className={resetParam || css.resetOff}>
-        Reset
-      </button>
+      {resetParam > 0 ? <button onClick={removeComments}>Reset</button> : ""}
     </div>
   );
 }

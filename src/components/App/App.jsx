@@ -26,6 +26,7 @@ function App() {
   };
 
   const totalFeedback = count["good"] + count["neutral"] + count["bad"];
+  const avarge = Math.round((count["good"] / totalFeedback) * 100);
 
   return (
     <>
@@ -36,7 +37,11 @@ function App() {
         removeComments={removeComments}
       />
       {totalFeedback ? (
-        <Feedback values={count} totalFeedback={totalFeedback} />
+        <Feedback
+          values={count}
+          totalFeedback={totalFeedback}
+          avarge={avarge}
+        />
       ) : (
         <Notification />
       )}

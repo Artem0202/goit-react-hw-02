@@ -1,5 +1,4 @@
-export default function Feedback({ values, totalFeedback }) {
-  const avarge = Math.round((values["good"] / totalFeedback) * 100);
+export default function Feedback({ values, totalFeedback, avarge }) {
   return (
     <>
       <p>Good: {values["good"]}</p>
